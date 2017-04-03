@@ -8,12 +8,12 @@ import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-
+print " Starting broker..."
 #GPIO pins setup
-GPIO.setup(7, GPIO.OUT)
-GPIO.setup(22, GPIO.OUT)
+#GPIO.setup(7, GPIO.OUT)
+#GPIO.setup(22, GPIO.OUT)
 
-power = 0;
+power = 0
 
 #Motor Move execution function
 def trigger(x, y):
@@ -29,23 +29,36 @@ def on_message(mqtts, userd, msg):
  if topic_payload[0] == "PowerOn":
   if power == 0:
     print "Bringing up motors"
+    power = 1
   elif power == 1:
     print " powering down"
-	
+    power = 0
  elif topic_payload[0] == "led":
-  
+     print " Led toggle"
  elif topic_payload[0] == "GripOn":
+     print " Grip  on"
  elif topic_payload[0] == "GripOff":
+     print " Grip off"
  elif topic_payload[0] == "uArmOn":
+     print " uArmOn"
  elif topic_payload[0] == "uArmOff":
+     print " uArmOff"
  elif topic_payload[0] == "baseUp":
+     print " baseUp"
  elif topic_payload[0] == "baseDown":
+     print " baseDown"
  elif topic_payload[0] == "baseLeft":
+     print " baseLeft"
  elif topic_payload[0] == "baseRight":
+     print " baseRight"
  elif topic_payload[0] == "carUp":
+     print " carUp"
  elif topic_payload[0] == "carDown":
+     print " carDown"
  elif topic_payload[0] == "carLeft":
+     print " carLeft"
  elif topic_payload[0] == "carRight":
+     print " carRight"
 
 def main():
  broker = "127.0.0.1"
