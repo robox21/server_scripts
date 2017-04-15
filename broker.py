@@ -1,21 +1,28 @@
 #!/usr/bin/env python
 
+# MQTT LISTENER FOR ROBO
+# CONTRIBUTERS:
+# Aniket Jagtap
+# Vishal Abhang
+# DeeJay.NuKe
+# 15-April-2017
+
 # INPUT CODES MAPPING
-# POWER_ON = 61;
-# POWER_OFF = 62;
-# LED_LIGHT = 51;
-# GRIP_ON = 41;
-# GRIP_OFF = 42;
-# UPPER_ARM_UP = 31;
-# UPPER_ARM_DOWN = 32;       
-# ARM_BASE_UP = 21;
-# ARM_BASE_DOWN = 22;
-# ARM_BASE_LEFT = 22;
-# ARM_BASE_RIGHT = 22;
-# CAR_UP = 11;
-# CAR_DOWN = 12;
-# CAR_LEFT = 13;
-# CAR_RIGHT = 14;
+# POWER_ON  61
+# POWER_OFF 62
+# LED_LIGHT 51
+# GRIP_ON 41
+# GRIP_OFF 42
+# UPPER_ARM_UP 31
+# UPPER_ARM_DOWN 32       
+# ARM_BASE_UP 21
+# ARM_BASE_DOWN 22
+# ARM_BASE_LEFT 22
+# ARM_BASE_RIGHT 22
+# CAR_UP 11
+# CAR_DOWN 12
+# CAR_LEFT 13
+# CAR_RIGHT 14
 
 import time
 import sys
